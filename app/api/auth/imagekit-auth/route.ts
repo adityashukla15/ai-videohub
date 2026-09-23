@@ -8,7 +8,7 @@ export async function GET() {
     });
 
     return Response.json({
-      authenticationParameters,
+      ...authenticationParameters,
       publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
     });
   } catch {
